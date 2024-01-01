@@ -1,0 +1,29 @@
+README Othello
+
+Overview:
+    This program runs a game of Othello. It has a two top level classes which are
+    PaneOrganizer and Controls.
+    - The PaneOrganizer class contains an instance of the board and controls, which
+    start the game
+    - The Controls class creates new instances of the SetupGame and board in order to
+    make new games and apply certain settings. It also contains many updating labels.
+    - In the SetupGame class, there is a method which creates the instances of the
+    Players, either human or computer.
+    - The referee class controls a timeline which controls turn taking in the game.
+    - The human player makes a move based on mouseclick
+    - The computer player makes a move based on best move determined by a miniMax
+    algorithm.
+
+Design Choices:
+    - I used a timeline so that the Computer can be delayed when making a move and
+    we can see it
+    - I used methods which served multiple purposes instead of making different,
+    redundant ones. For example, the checkValidMove method can also flip pieces
+    depending on a boolean passed through.
+    - There is a MiniMax AI algorithm within the computer player which allows for
+    various levels of AI in the game.
+
+Extra Features:
+    - Non-deterministic MiniMax Algorithm (not same outcome every time :))
+    - Displays last move made by player
+    - Can change border color
